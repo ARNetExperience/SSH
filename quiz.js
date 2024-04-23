@@ -1,29 +1,29 @@
 //Question bank
 var questionBank= [
     {
-        "question": "What does SSH stand for?",
-        "option": ["Secure Shell", "Secure Socket Host", "Simple Secure Hosting", "System Security Helper"],
-        "answer": "Secure Shell"
+        "question": "What does SNMP stand for?",
+        "option": ["Simple Network Management Protocol", "Secure Network Monitoring Protocol", "Systematic Network Management Protocol", "Structured Network Messaging Protocol"],
+        "answer": "Simple Network Management Protocol"
     },
     {
-        "question": "Which layer of the OSI model does SSH primarily operate on?",
+        "question": "Which layer of the OSI model does SNMP primarily operate on?",
         "option": ["Application layer", "Transport layer", "Network layer", "Data link layer"],
         "answer": "Application layer"
     },
     {
-        "question": "What is the primary purpose of SSH?",
-        "option": ["To transfer files between computers", "To establish secure connections between devices", "To manage network congestion", "To resolve domain names to IP addresses"],
-        "answer": "To establish secure connections between devices"
+        "question": "What is the primary purpose of SNMP?",
+        "option": ["To secure network connections", "To transfer files between computers", "To manage network devices and monitor their performance", "To establish secure VPN connections"],
+        "answer": "To manage network devices and monitor their performance"
     },
     {
-        "question": "Which protocol does SSH primarily use for encryption and authentication?",
-        "option": ["HTTP", "FTP", "TCP", "SSH protocol"],
-        "answer": "SSH protocol"
+        "question": "Which type of information can SNMP manage?",
+        "option": ["Hardware information", "Software information", "Configuration information", "All of the above"],
+        "answer": "All of the above"
     },
     {
-        "question": "What is the default port number for SSH?",
-        "option": ["20", "21", "22", "23"],
-        "answer": "22"
+        "question": "What is the default port number for SNMP?",
+        "option": ["161", "162", "443", "80"],
+        "answer": "161"
     }
     
     
