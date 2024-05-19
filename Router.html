@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Router Configuration Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .command {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            margin-bottom: 30px;
+        }
+
+        .copy-btn {
+            right: 0;
+            top: 0;
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="text-center mb-4">Router Configuration Guide</h1>
+
+        <div class="command">
+
+            <p>hostname host1 <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            
+            <p>enable password <button class=" copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            <p>ip domain-name user.com <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            <p>username admin password 12345 <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            <p>crypto generate rsa? <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            <p>general keys Generate a general purpose RSA key pair for signing and encryption <button
+                    class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            <p>crypto key generate rsa <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            <p>The name for the keys will be: host1.user.com <br>
+                Choose the Size of the key modulus in the range of 360 to 2048 for your General Purposes Keys. <br>
+                Choosing a key modulus greater than 512 may take few minutes.
+                <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button>
+            </p>
+            <p>How many bits in the modulus [512]:1024 <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            <p>%Generating 1024 bits RSA keys, keys will be non-exportable...[OK] <br>
+                %SSH-5-ENABLED: SSH 1.99 has been enabled
+            </p>
+            <p>line vty 0 15 <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            <p>login local <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            <p>transport input ssh <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            <p>exit <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+            <p>ip ssh version 2 <button class="copy-btn btn btn-sm btn-light"><i class="ri-file-copy-line"></i></button></p>
+
+        </div>
+        <hr>
+
+        <div class="command">
+            Router(config)#hostname host1
+        </div>
+        <div class="description">
+            <p>This command changes the router's name to <strong>host1</strong> so it's easier to identify.</p>
+        </div>
+
+        <div class="command">
+            host1(config)#enable password
+        </div>
+        <div class="description">
+            <p>This command sets a password that will be required to access higher-level commands on the router. Note
+                that the actual password isn’t provided in this example.</p>
+        </div>
+
+        <div class="command">
+            host1(config)#ip domain-name user.com
+        </div>
+        <div class="description">
+            <p>This command sets the router's domain name to <strong>user.com</strong>. It’s part of the identity of the
+                router.</p>
+        </div>
+
+        <div class="command">
+            host1(config)#username admin password 12345
+        </div>
+        <div class="description">
+            <p>This command creates a user account named <strong>admin</strong> with the password
+                <strong>12345</strong>. This account can be used to log into the router.
+            </p>
+        </div>
+
+        <div class="command">
+            host1(config)#crypto generate rsa?
+        </div>
+        <div class="description">
+            <p>This command starts the process of generating RSA keys, which are used for secure communication.</p>
+        </div>
+
+        <div class="command">
+            host1(config)#crypto key generate rsa
+        </div>
+        <div class="description">
+            <p>This confirms that we want to generate RSA keys. RSA keys are used for encrypting data.</p>
+        </div>
+
+        <div class="command">
+            The name for the keys will be: host1.user.com<br>
+            Choose the Size of the key modulus in the range of 360 to 2048 for your General Purposes Keys.<br>
+            Choosing a key modulus greater than 512 may take few minutes.<br>
+            How many bits in the modulus [512]:1024
+        </div>
+        <div class="description">
+            <p>This step names the keys <strong>host1.user.com</strong> and asks how big the keys should be. Choosing
+                1024 bits provides a good level of security.</p>
+        </div>
+
+        <div class="command">
+            %Generating 1024 bits RSA keys, keys will be non-exportable...[OK]<br>
+            %SSH-5-ENABLED: SSH 1.99 has been enabled
+        </div>
+        <div class="description">
+            <p>The router confirms that it has generated the keys and enabled SSH (Secure Shell) version 1.99, which
+                allows secure remote access to the router.</p>
+        </div>
+
+        <div class="command">
+            host1(config)#line vty 0 15
+        </div>
+        <div class="description">
+            <p>This command selects the virtual terminal lines (0 to 15) that will be used for remote access.</p>
+        </div>
+
+        <div class="command">
+            host1(config-line)#login local
+        </div>
+        <div class="description">
+            <p>This command tells the router to use the locally configured user accounts (like the
+                <strong>admin</strong> account we created) for login authentication.
+            </p>
+        </div>
+
+        <div class="command">
+            host1(config-line)#transport input ssh
+        </div>
+        <div class="description">
+            <p>This command ensures that only SSH (and not less secure methods like Telnet) can be used to remotely
+                access the router.</p>
+        </div>
+
+        <div class="command">
+            host1(config-line)#exit
+        </div>
+        <div class="description">
+            <p>This command exits from the VTY line configuration mode back to the main configuration mode.</p>
+        </div>
+
+        <div class="command">
+            host1(config)#ip ssh version 2
+        </div>
+        <div class="description">
+            <p>This command sets the router to use SSH version 2, which is more secure than SSH version 1.</p>
+        </div>
+
+        <br>
+        <center>
+            <a href="Router Configuration Guide.pdf" download><button class="btn btn-dark btn-sm">Download
+                    PDF</button></a>
+
+        </center>
+        <br>
+        <br>
+    </div>
+
+    <script>
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const paragraph = button.parentElement;
+                const range = document.createRange();
+                range.selectNode(paragraph.firstChild);
+                window.getSelection().removeAllRanges(); // Clear existing selections
+                window.getSelection().addRange(range); // Select the text
+                try {
+                    //document.execCommand('copy'); // Copy to clipboard
+                    alert('Text copied: ' + paragraph.textContent.trim());
+                } catch (err) {
+                    alert('Failed to copy text');
+                }
+                window.getSelection().removeAllRanges(); // Clear selection
+            });
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

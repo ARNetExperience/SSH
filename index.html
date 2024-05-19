@@ -36,7 +36,7 @@
 
 
 
-            top: 49.4%;
+            top: 48%;
 
 
             z-index: 1;
@@ -65,7 +65,7 @@
 
 
 
-            top: 48.6%;
+            top: 47%;
 
 
             z-index: 1;
@@ -102,7 +102,7 @@
 
 
 
-            top: 49%;
+            top: 47.4%;
 
 
             z-index: 1;
@@ -128,7 +128,7 @@
 
 
 
-            margin-top: -8.9%;
+            margin-top: -9.9%;
 
 
 
@@ -142,53 +142,84 @@
 
         }
 
-        .salnted-line {
-
-            height: 500px;
-
-
-            transform: rotate(60deg);
-
-            margin-left: 28%;
-
-
-
-            margin-top: -17.3%;
-
-
-
-            position: absolute;
-
-            border-color: purple;
-
-            border-style: solid;
-
-            z-index: 0;
-
-        }
 
 
 
 
 
 
-        @keyframes colorChange {
+
+
+
+        @keyframes PC1toRouter {
             0% {
-                color: #5c6400;
+                transform: translateY(0) translateX(0);
+            }
+
+            25% {
+                transform: translateY(50%) translateX(600%);
             }
 
             50% {
-                color: #eaff00;
+                transform: translateY(50%) translateX(1400%);
+            }
+
+            75% {
+                transform: translateY(50%) translateX(600%);
             }
 
             100% {
-                color: #5c6400;
+                transform: translateY(0) translateX(0);
             }
+
+
+
+
+
+
+
         }
 
 
-        h1 span:hover {
-            animation: colorChange 5s infinite;
+
+        #PC1toRouter {
+            animation: PC1toRouter 20s ease-in-out 3 forwards;
+        }
+
+
+        @keyframes PC2toRouter {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+
+            25% {
+                transform: translateY(-50%) translateX(600%);
+            }
+
+            50% {
+                transform: translateY(-50%) translateX(1400%);
+            }
+
+            75% {
+                transform: translateY(-50%) translateX(600%);
+            }
+
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+        #PC2toRouter {
+            animation: PC2toRouter 20s ease-in-out 3 forwards;
         }
     </style>
 
@@ -299,7 +330,7 @@
                     <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
                         data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
                         data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-                        data-bs-toggle="modal" data-bs-target="#PC1Browser">
+                        data-bs-toggle="modal" data-bs-target="#PC-1IpAddress">
                         <div class="HotspotAnnotation">PC-1</div>
                     </button>
 
@@ -308,19 +339,19 @@
             </div>
 
 
-            <div class="connector1" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+            <div class="connector1" data-bs-toggle="modal" data-bs-target="#FastEthernet"></div>
 
 
 
 
 
 
-           
-
-            <div class="connector" data-bs-toggle="modal" data-bs-target="#Connector"></div>
 
 
-            <div class="connector2" data-bs-toggle="modal" data-bs-target="#Connector"></div>
+            <div class="connector" data-bs-toggle="modal" data-bs-target="#FastEthernet"></div>
+
+
+            <div class="connector2" data-bs-toggle="modal" data-bs-target="#FastEthernet"></div>
 
 
 
@@ -329,11 +360,12 @@
 
 
                 <model-viewer src="switch.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-                    poster="poster.webp" shadow-intensity="1" style="margin-top: -8%;position: absolute;width: 15%;margin-left: 45%;">
+                    poster="poster.webp" shadow-intensity="1"
+                    style="margin-top: -8%;position: absolute;width: 15%;margin-left: 45%;">
                     <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
                         data-position="-17.82355475016235m 6.123874902725213m -167.32013377219792m"
                         data-normal="0m 1m 0m" data-visibility-attribute="visible" data-bs-toggle="modal"
-                        data-bs-target="#Switch">
+                        data-bs-target="#switch">
                         <div class="HotspotAnnotation">Switch</div>
                     </button>
 
@@ -346,7 +378,8 @@
 
                 <!-- Router -->
                 <model-viewer src="router 2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-                    poster="poster.webp" shadow-intensity="1" style="margin-top: -10%;position: absolute;margin-left: 60%;" >
+                    poster="poster.webp" shadow-intensity="1"
+                    style="margin-top: -10%;position: absolute;margin-left: 60%;">
                     <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-1"
                         data-position="37.69583283935017m 4.179193256400421m -51.57656243125259m"
                         data-normal="0.006317747746330481m 0.8348694792995796m -0.5504116991829504m"
@@ -423,7 +456,7 @@
                     <button class="Hotspot transparent-button btn btn-sm" slot="hotspot-1"
                         data-position="-0.043771782138294135m -0.0007097379525175529m 0.5965980096034809m"
                         data-normal="0m 1.6292067894774223e-7m 0.9999999999999868m" data-visibility-attribute="visible"
-                        data-bs-toggle="modal" data-bs-target="#PC1Browser">
+                        data-bs-toggle="modal" data-bs-target="#PC-2IpAddress">
                         <div class="HotspotAnnotation">PC-2</div>
                     </button>
 
@@ -474,7 +507,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body text-black">
-                            IP Adress > 10.10.10.1
+                            IP Address > 192.168.10.0
                             <img src="2.png" width="100%" height="100%">
                         </div>
                         <div class="modal-footer">
@@ -558,12 +591,17 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body text-black">
-                            Connect modem or transceiver to link home network to internet.
+                            Connect modem or transceiver to link home network to internet.<br>
+
+
                             <img src="6.png" width="100%" height="100%">
                         </div>
                         <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                data-bs-target="#OpenRouterCLIModal">Opne CLI</button>
                             <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
                             <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+
                         </div>
                     </div>
                 </div>
@@ -592,8 +630,246 @@
             </div>
 
 
+            <div class="modal fade" id="PC-1IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Windows OS PC-1
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                id="PC1IPAdressCloseBtn"></button>
+                        </div>
+                        <div class="modal-body text-black">
+                            <center><img src="PC.PNG" width="50%"></center><br>
+                            IP Address > 192.168.10.5<br>
+                            Subnet Mask > 255.255.255.0<br>
+                            Degault Gateway > 192.168.10.1<br>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                data-bs-target="#PC1CMD">Open Command Prompt</button>
+                            <button type="button" class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="PC-2IpAddress" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Windows OS PC-1
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                id="PC1IPAdressCloseBtn"></button>
+                        </div>
+                        <div class="modal-body text-black">
+                            <center><img src="PC.PNG" width="50%"></center><br>
+                            IP Address > 192.168.10.6<br>
+                            Subnet Mask > 255.255.255.0<br>
+                            Degault Gateway > 192.168.10.1<br>
 
 
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                data-bs-target="#PC2CMD">Open Command Prompt</button>
+                            <button type="button" class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade " id="PC1CMD" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-black" id="exampleModalLabel">PC-1 Command Prompt
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="console">
+                                <div class="output" id="output3">
+                                    PC 1 Command Line 1.0
+                                </div>
+                                <div class="input">
+                                    <input type="text" id="inputCmd3" placeholder="Type your command here...">
+                                    <button onclick="executeCommand3()" class="btn btn-danger btn-lg">Enter</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" onclick="autoexecuteCommand3()"
+                                id="PC1auto_cmd">Auto Execute
+                                Commands</button>
+                            <button type="button" class="btn btn-danger" onclick="PC1CommandListFile()">Command
+                                Reference</button>
+                            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade " id="PC2CMD" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-black" id="exampleModalLabel">PC-2 Command Prompt
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="console">
+                                <div class="output" id="output4">
+                                    PC 2 Command Line 1.0
+                                </div>
+                                <div class="input">
+                                    <input type="text" id="inputCmd4" placeholder="Type your command here...">
+                                    <button onclick="executeCommand4()" class="btn btn-primary btn-lg">Enter</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" onclick="autoexecuteCommand4()"
+                                id="PC2auto_cmd">Auto Execute
+                                Commands</button>
+                            <button type="button" class="btn btn-primary" onclick="PC2CommandListFile()">Command
+                                Reference</button>
+                            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade " id="OpenRouterCLIModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-black" id="exampleModalLabel">Router Command Line
+                                Interface (CLI)
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="console">
+                                <div class="output" id="output2"></div>
+                                <div class="input">
+                                    <input type="text" id="inputCmd2" placeholder="Type your command here...">
+                                    <button onclick="executeCommandRouter()"
+                                        class="btn btn-success btn-lg">Enter</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" onclick="AutoAddRouterCmds()"
+                                id="routerAutoCmdBtn">Auto Execute
+                                Commands</button>
+                            <button type="button" class="btn btn-success" onclick="RouterCommandListFile()">Command
+                                Reference</button>
+                            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="model-viewer-container">
+
+                <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+                    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="PC1toRouter"
+                    style="width: 5%;z-index: 3;margin-top: -35%;margin-left: 15%;position: absolute;display: none; ">
+                    <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
+                        data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+                        data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible"
+                        data-bs-toggle="modal" data-bs-target="#model1toRouter">
+                        <div class="HotspotAnnotation">Packet</div>
+                    </button>
+                </model-viewer>
+
+            </div>
+
+            <div class="model-viewer-container">
+
+                <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+                    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="PC2toRouter"
+                    style="width: 5%;z-index: 3;margin-top: -15%;margin-left: 15%;position: absolute;display: none; ">
+                    <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
+                        data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+                        data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible"
+                        data-bs-toggle="modal" data-bs-target="#model2toRouter">
+                        <div class="HotspotAnnotation">Packet</div>
+                    </button>
+                </model-viewer>
+
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="exampleModalLabel">WS-C3650-48PS-S Cisco
+                            Catalyst 3650 Network Switch</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body ">
+                        <center><img src="switch.jpg" width="50%"></center>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Okay</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="FastEthernet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Fast Ethernet
+                            Cable
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <center>
+                            <img src="fastethernet.jpg" alt="cross over copper cable" width="40%">
+                        </center>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Okay</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -695,8 +971,726 @@
 
         <script>
 
+            // Define a state variable to keep track of the current state
+            var currentState1 = 0;
+            var hostname_user_define = 'host1';
+            var domain_name_user_define = 'user.com';
+            var password_user_define = '12345';
+            var username_user_define = 'admin';
+            var keybits_user_define = '1024';
+            var Routerstate = false;
+
+            function executeCommandRouter() {
 
 
+
+
+                var input2 = document.getElementById('inputCmd2').value.trim();
+                var outputDiv2 = document.getElementById('output2');
+
+                if (input2 === '') {
+                    outputDiv2.innerHTML += '<p>>Router (config-router) #Please enter a command.</p>';
+                    return;
+                }
+
+
+
+                // Check the current state
+                switch (currentState1) {
+                    case 0: // Initial state: expecting "router bgp 100"
+
+
+
+                        // Assuming input2 contains the user input
+                        if (!input2.startsWith('hostname ')) {
+                            alert('Please enter "hostname name_host"');
+                            outputDiv2.innerHTML += '<p>>Router (config) #Invalid command. Please enter "hostname name_host".</p>';
+                            return;
+                        } else {
+                            // If input starts with 'hostname ', extract the hostname and proceed with the rest of the code
+                            hostname_user_define = input2.substring(9); // Extracts the user-defined hostname
+                            console.log('Hostname is:', hostname_user_define);
+                            // Proceed with the rest of your logic
+                            outputDiv2.innerHTML += '<p>>Router (config) #' + input2 + '</p>';
+
+                            alert('Please enter "enable password"');
+                        }
+
+                        break;
+                    case 1:
+
+                        if (input2 !== 'enable password') {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Invalid command. Please enter "enable password".</p>';
+                            return;
+                        }
+
+
+                        outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #' + input2 + '</p>';
+
+                        alert('Please enter "ip domain-name your_domain_name.com"');
+                        break;
+
+                    case 2:
+
+
+                        var domainPattern = /\.(com|in|org|net|edu|gov)$/;
+
+                        // Assuming input2 contains the user input and domain_name_user_define contains the user-defined domain name
+                        if (!input2.startsWith('ip domain-name ')) {
+                            outputDiv2.innerHTML += '<p>' + hostname_user_define + ' (config) #Invalid command. Please enter "ip domain-name your_domain_name.com".</p>';
+                            return;
+                        } else {
+                            // Extract the domain name
+                            domain_name_user_define = input2.substring(15); // Extracts the user-defined domain name
+
+                            // Check if domain_name_user_define matches the domain pattern
+                            if (!domainPattern.test(domain_name_user_define)) {
+                                outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Invalid domain name format. Please enter a domain name ending with .com, .in, .org, .net, .edu, or .gov.</p>';
+                                return;
+                            }
+
+                            // Proceed with the rest of your code
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #' + input2 + '</p>';
+
+                            alert('Enter "username your_username password your_password"');
+                        }
+
+                        break;
+
+
+                    case 3:
+
+
+
+                        // Extract the username and password
+                        const parts = input2.split(' ');
+                        const username = parts[1];
+                        const password = parts[3];
+
+                        // Check if both username and password are empty
+                        if (!input2.startsWith('username ')) {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Invalid Format. Enter username your_username password your_password.</p>';
+                            return;
+                        }
+
+                        // Check if a password entry is missing
+                        if (parts.length !== 4 || parts[2] !== 'password') {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Invalid command. Please enter both username and password.</p>';
+                            return;
+                        }
+
+
+
+                        // Check if either username or password are empty
+                        if (!username.trim() || !password.trim()) {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Username and password cannot be empty.</p>';
+                            return;
+                        }
+
+                        // Check if either username or password are empty
+                        if (!username.trim() || !password.trim()) {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Username and password cannot be empty.</p>';
+                            return;
+                        }
+                        if (!username.trim() && !password.trim()) {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Username and password cannot be empty. Enter username your_username password your_password.</p>';
+                            return;
+                        }
+                        if (!username.trim()) {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Username cannot be empty. Enter username your_username password your_password.</p>';
+                            return;
+                        }
+                        if (!password.trim()) {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Password cannot be empty. Enter username your_username password your_password.</p>';
+                            return;
+                        }
+
+                        username_user_define = username;
+                        password_user_define = password;
+
+
+                        outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #' + input2 + '</p>';
+
+
+                        alert('Please enter "crypto generate rsa?"');
+
+                        break;
+
+
+                    case 4:
+
+                        if (input2 !== 'crypto generate rsa?') {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Invalid command. Please enter "crypto generate rsa?".</p>';
+                            return;
+                        }
+
+
+
+
+                        outputDiv2.innerHTML += '<p>>general keys Generate a general purpose RSA key pair for signing and encryption</p>';
+
+                        alert('Please enter "crypto key generate rsa"');
+
+
+                        break;
+
+
+                    case 5:
+
+                        if (input2 !== 'crypto key generate rsa') {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Invalid command. Please enter "crypto key generate rsa".</p>';
+                            return;
+                        }
+
+
+                        outputDiv2.innerHTML += '<p>>The name for the keys will be: ' + hostname_user_define + '.' + domain_name_user_define + '<br>Choose the Size of the key modulus in the range of 360 to 2048 for your General Purposes Keys.<br>Choosing a key modulus greater than 512 may take few minutes.<br><br>How many bits in the modulus [512]:</p>';
+
+                        alert('Choose the Size of the key modulus in the range of 360 to 2048 for your General Purposes Keys');
+
+                        break;
+
+                    case 6:
+
+                        if (!(input2 >= 360 && input2 <= 2048)) {
+                            outputDiv2.innerHTML += '<p>Choose the Size of the key modulus in the range of 360 to 2048 for your General Purposes Keys</p>';
+                            return;
+                        }
+
+                        keybits_user_define = input2;
+                        outputDiv2.innerHTML += '<p>%Generating ' + keybits_user_define + ' bits RSA keys, keys will be non-exportable...[OK]<br>%SSH-5-ENABLED: SSH 1.99 has been enabled </p>';
+
+                        alert('Please enter "line vty 0 15"');
+
+                        break;
+
+
+                    case 7:
+
+                        if (input2 !== 'line vty 0 15') {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Invalid command. Please enter "line vty 0 15".</p>';
+                            return;
+                        }
+
+                        outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #' + input2 + '</p>';
+
+                        alert('Please enter "login local"');
+                        break;
+
+
+                    case 8:
+
+
+                        if (input2 !== 'login local') {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config-line) #Invalid command. Please enter "login local".</p>';
+                            return;
+                        }
+
+                        outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config-line) #' + input2 + '</p>';
+
+                        alert('Please enter "transport input ssh"');
+                        break;
+
+                    case 9:
+
+
+                        if (input2 !== 'transport input ssh') {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config-line) #Invalid command. Please enter "transport input ssh".</p>';
+                            return;
+                        }
+
+                        outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config-line) #' + input2 + '</p>';
+
+                        alert('Please enter "exit"');
+                        break;
+
+                    case 10:
+
+
+                        if (input2 !== 'exit') {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config-line) #Invalid command. Please enter "exit".</p>';
+                            return;
+                        }
+
+                        outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config-line) #' + input2 + '</p>';
+
+                        alert('Please enter "ip ssh version 2"');
+                        break;
+
+
+                    case 11:
+
+
+                        if (input2 !== 'ip ssh version 2') {
+                            outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #Invalid command. Please enter "ip ssh version 2".</p>';
+                            return;
+                        }
+
+                        outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #' + input2 + '</p>';
+
+                        Routerstate = true;
+
+                        alert("Now configure PC-2. Click on PC-2.");
+
+
+                        break;
+
+                }
+
+                // Add your command execution logic here
+                // For demonstration, let's just echo the command
+                // outputDiv2.innerHTML += '<p>>Router (config-router) #' + input2 + '</p>';
+
+                // Update the current state
+                currentState1++;
+
+                // Clear input field after command execution
+                document.getElementById('inputCmd2').value = '';
+
+                // Scroll to the bottom after a slight delay
+                setTimeout(function () {
+                    var outputDiv2 = document.getElementById('output2');
+                    outputDiv2.scrollTop = outputDiv2.scrollHeight;
+                }, 50);
+            }
+
+
+            function AutoAddRouterCmds() {
+                document.getElementById("routerAutoCmdBtn").disabled = true;
+
+                if (currentState1 > 0) {
+                    if (currentState1 > 0 && currentState1 < 11) {
+                        alert('Already Configuration for Router is in process.');
+                    }
+                    if (currentState1 == 11) {
+                        alert('Already Configuration is done for Router.')
+                    }
+                    return;
+                } else {
+
+
+                    currentState1 = 12;
+
+
+
+                    var outputDiv2 = document.getElementById('output2');
+
+                    outputDiv2.innerHTML += '<p>>Router (config) #hostname ' + hostname_user_define + '</p>';
+
+
+
+                    //case 1
+                    outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #enable password</p>';
+
+
+                    //case 2
+                    outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #ip domain-name ' + domain_name_user_define + '</p>';
+
+
+                    //case 3
+                    outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #username ' + username_user_define + ' password ' + password_user_define + '</p>';
+
+                    //case 4
+                    outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #crypto generate rsa?</p>';
+
+                    outputDiv2.innerHTML += '<p>>general keys Generate a general purpose RSA key pair for signing and encryption</p>';
+
+                    //case 5
+                    outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #crypto key generate rsa</p>';
+
+                    outputDiv2.innerHTML += '<p>>The name for the keys will be: ' + hostname_user_define + '.' + domain_name_user_define + '<br>Choose the Size of the key modulus in the range of 360 to 2048 for your General Purposes Keys.<br>Choosing a key modulus greater than 512 may take few minutes.<br><br>How many bits in the modulus [512]:1024</p>';
+
+
+                    //case 6
+                    outputDiv2.innerHTML += '<p>%Generating ' + keybits_user_define + ' bits RSA keys, keys will be non-exportable...[OK]<br>%SSH-5-ENABLED: SSH 1.99 has been enabled </p>';
+
+                    //case 7
+                    outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #line vty 0 15</p>';
+
+                    //case 8
+                    outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config-line) #login local</p>';
+
+                    //case 9
+                    outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config-line) #transport input ssh</p>';
+
+                    //case 10
+                    outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config-line) #exit</p>';
+
+                    //case 11
+                    outputDiv2.innerHTML += '<p>>' + hostname_user_define + ' (config) #ip ssh version 2</p>';
+
+                    Routerstate = true;
+
+                    alert("Now configure PC-2. Click on PC-2.");
+
+                }
+
+
+            }
+
+
+            // Define a state variable to keep track of the current state
+            var currentStatePC2 = 0;
+            var PC2hostname_user_define = 'PC2-SSH';
+
+            var PC2sate = false;
+
+
+            function executeCommand4() {
+                var input4 = document.getElementById('inputCmd4').value.trim();
+                var outputDiv4 = document.getElementById('output4');
+
+                if (Routerstate == false) {
+                    alert('Please configure Router.');
+                    return;
+                }
+
+                if (input4 === '') {
+                    outputDiv4.innerHTML += '<p>>Please enter a command.</p>';
+                    return;
+                }
+
+
+
+
+                switch (currentStatePC2) {
+
+                    case 0:
+
+
+                        if (input4 != 'ssh -l Admin 192.168.10.1') {
+                            alert('Please enter a command "ssh -l Admin 192.168.10.1"');
+                            outputDiv4.innerHTML += '<p>>Invalid Command. Please enter a command "ssh -l Admin 192.168.10.1"</p>';
+                            return;
+                        }
+
+                        outputDiv4.innerHTML += '<p>>ssh -l Admin 192.168.10.1</p>';
+
+                        alert('Enter password you set while configuring Router.');
+                        break;
+
+                    case 1:
+
+
+                        if (input4 != password_user_define) {
+                            outputDiv4.innerHTML += '<p>% Login Invalid</p>';
+                            return;
+                        }
+
+                        outputDiv4.innerHTML += '<p>>Password:' + password_user_define + '</p>';
+
+                        alert('Please enter a command "en"');
+                        document.getElementById("PC2auto_cmd").disabled = true;
+                        break;
+
+                    case 2:
+
+
+                        if (input4 != 'en') {
+                            outputDiv4.innerHTML += '<p>' + hostname_user_define + '>Invalid Command. Please enter a command "en"</p>';
+                            return;
+                        }
+                        outputDiv4.innerHTML += '<p>' + hostname_user_define + '>en</p>';
+
+                        alert('Again enter the same password.');
+                        break;
+
+                    case 3:
+
+
+                        if (input4 != password_user_define) {
+                            outputDiv4.innerHTML += '<p>% Login Invalid</p>';
+                            return;
+                        }
+
+                        outputDiv4.innerHTML += '<p>Password:' + password_user_define + '</p>';
+
+                        alert('Please enter a command "conf t"');
+                        break;
+
+                    case 4:
+
+
+                        if (input4 != 'conf t') {
+                            outputDiv4.innerHTML += '<p>' + hostname_user_define + ' #Invalid Command. Please enter a command "conf t"</p>';
+                            return;
+                        }
+
+                        outputDiv4.innerHTML += '<p>' + hostname_user_define + ' #conf t</p>';
+
+                        alert('Please enter "hostname name_host"');
+                        break;
+
+                    case 5:
+
+
+                        if (!input4.startsWith('hostname ')) {
+                            outputDiv4.innerHTML += '<p>' + hostname_user_define + '(config) #Invalid command. Please enter "hostname name_host".</p>';
+                            return;
+                        } else {
+                            PC2hostname_user_define = input4.substring(9);
+
+                            console.log('Hostname is:', PC2hostname_user_define);
+                            outputDiv4.innerHTML += '<p>' + PC2hostname_user_define + '(config) #hostname ' + PC2hostname_user_define + '</p>';
+
+
+                            outputDiv4.innerHTML += '<p>' + PC2hostname_user_define + '(config) #</p>';
+
+
+                            PC2sate = true;
+
+                            alert("Now configure PC-1. Configure PC-1.\nAlso you can view the packet flow when you were configuring PC2.");
+
+                            document.getElementById("PC2auto_cmd").disabled = true;
+
+                            var modelViewer = document.getElementById('PC2toRouter');
+                            modelViewer.style.animation = 'PC2toRouter 20s ease-in-out 3 forwards;';
+                            modelViewer.style.display = 'block';
+
+                            // When the animation ends, hide the model-viewer element
+                            modelViewer.addEventListener('animationend', function () {
+
+                                modelViewer.style.display = 'none';
+                            });
+
+
+                        }
+
+
+                        break;
+
+
+
+                }
+
+                currentStatePC2++;
+
+                // Clear input field after command execution
+                document.getElementById('inputCmd4').value = '';
+
+                setTimeout(function () {
+                    var outputDiv4 = document.getElementById('output4');
+                    outputDiv4.scrollTop = outputDiv4.scrollHeight;
+                }, 50);
+
+
+            }
+
+            function autoexecuteCommand4() {
+
+                if (Routerstate == false) {
+                    alert('Please configure Router.');
+                    return;
+                }
+
+                document.getElementById("PC2auto_cmd").disabled = true;
+
+
+
+
+
+                if (currentStatePC2 > 0) {
+                    if (currentStatePC2 > 0 && currentStatePC2 < 5) {
+                        alert('Already Configuration for PC-2 is in process.');
+                    }
+                    if (currentStatePC2 == 5) {
+                        alert('Already Configuration is done for PC-2.')
+                    }
+                    return;
+                } else {
+                    currentStatePC2 = 6;
+
+                    var outputDiv4 = document.getElementById('output4');
+
+                    //case 0
+                    outputDiv4.innerHTML += '<p>>ssh -l Admin 192.168.10.1</p>';
+
+                    //case 1
+                    outputDiv4.innerHTML += '<p>>Password:' + password_user_define + '</p>';
+                    //case 2
+                    outputDiv4.innerHTML += '<p>' + hostname_user_define + '>en</p>';
+
+                    //case 3
+                    outputDiv4.innerHTML += '<p>Password:' + password_user_define + '</p>';
+
+                    //case 4
+                    outputDiv4.innerHTML += '<p>' + hostname_user_define + ' #conf t</p>';
+
+                    //case 5
+                    outputDiv4.innerHTML += '<p>' + hostname_user_define + '(config) #hostname ' + PC2hostname_user_define + '</p>';
+
+                    outputDiv4.innerHTML += '<p>' + PC2hostname_user_define + '(config) #</p>';
+
+
+
+                    setTimeout(function () {
+                        var outputDiv4 = document.getElementById('output4');
+                        outputDiv4.scrollTop = outputDiv4.scrollHeight;
+                    }, 50);
+
+
+                    PC2sate = true;
+
+                    alert("Now configure PC-1. Configure PC-1.\nAlso you can view the packet flow when you were configuring PC2.");
+
+                    var modelViewer = document.getElementById('PC2toRouter');
+                    modelViewer.style.animation = 'PC2toRouter 20s ease-in-out 3 forwards;';
+                    modelViewer.style.display = 'block';
+
+                    // When the animation ends, hide the model-viewer element
+                    modelViewer.addEventListener('animationend', function () {
+
+                        modelViewer.style.display = 'none';
+                    });
+
+                }
+
+            }
+
+            var currentStatePC1 = 0;
+
+            function executeCommand3() {
+
+                if (Routerstate == false) {
+                    alert('Please configure Router.');
+                    return;
+                }
+
+                if (PC2sate == false) {
+                    alert('Please configure PC2.');
+                    return;
+                }
+
+                var input3 = document.getElementById('inputCmd3').value.trim();
+                var outputDiv3 = document.getElementById('output3');
+
+                if (input3 === '') {
+                    outputDiv3.innerHTML += '<p>>Please enter a command.</p>';
+                    return;
+                }
+
+                switch (currentStatePC1) {
+
+                    case 0:
+
+
+                        if (input3 != 'ssh -l Admin 192.168.10.1') {
+                            alert('Please enter a command "ssh -l Admin 192.168.10.1"');
+                            outputDiv3.innerHTML += '<p>>Invalid Command. Please enter a command "ssh -l Admin 192.168.10.1"</p>';
+                            return;
+                        }
+
+                        outputDiv3.innerHTML += '<p>>ssh -l Admin 192.168.10.1</p>';
+                        outputDiv3.innerHTML += '<p>Password:</p>';
+
+                        alert('Enter password you have set while configuring Router.');
+
+                        break;
+
+                    case 1:
+
+
+                        if (input3 != password_user_define) {
+                            outputDiv3.innerHTML += '<p>% Login Invalid</p>';
+                            return;
+                        }
+
+                        outputDiv3.innerHTML += '<p>Password:' + password_user_define + '</p>';
+                        outputDiv3.innerHTML += '<p>' + PC2hostname_user_define + '></p>';
+
+                        alert("You are done with configuration of PC-1. Please close this window see how packet flow works when you configure PC-1.");
+
+                        document.getElementById("PC1auto_cmd").disabled = true;
+
+                        var modelViewer = document.getElementById('PC1toRouter');
+                        modelViewer.style.animation = 'PC1toRouter 20s ease-in-out 3 forwards;';
+                        modelViewer.style.display = 'block';
+
+                        // When the animation ends, hide the model-viewer element
+                        modelViewer.addEventListener('animationend', function () {
+
+                            modelViewer.style.display = 'none';
+                        });
+                        break;
+                }
+
+
+                currentStatePC1++;
+
+                // Clear input field after command execution
+                document.getElementById('inputCmd3').value = '';
+
+                setTimeout(function () {
+                    var outputDiv3 = document.getElementById('output3');
+                    outputDiv3.scrollTop = outputDiv3.scrollHeight;
+                }, 50);
+            }
+
+
+            function autoexecuteCommand3() {
+
+                if (Routerstate == false) {
+                    alert('Please configure Router.');
+                    return;
+                }
+
+                if (PC2sate == false) {
+                    alert('Please configure PC2.');
+                    return;
+                }
+
+                document.getElementById("PC1auto_cmd").disabled = true;
+
+                if (currentStatePC1 == 1) {
+                    alert('Already Configuration is in process or done for PC-1.');
+                    return;
+                }
+
+                else {
+                    currentStatePC1 = 2;
+
+                    var outputDiv3 = document.getElementById('output3');
+
+                    //case 0
+                    outputDiv3.innerHTML += '<p>>ssh -l Admin 192.168.10.1</p>';
+
+                    //case 1
+                    outputDiv3.innerHTML += '<p>Password:' + password_user_define + '</p>';
+                    outputDiv3.innerHTML += '<p>' + PC2hostname_user_define + '></p>';
+
+                    setTimeout(function () {
+                        var outputDiv3 = document.getElementById('output3');
+                        outputDiv3.scrollTop = outputDiv3.scrollHeight;
+                    }, 50);
+
+
+                    alert("You are done with configuration of PC-1. Please close this window see how packet flow works when you configure PC-1.");
+
+                    var modelViewer = document.getElementById('PC1toRouter');
+                    modelViewer.style.animation = 'PC1toRouter 20s ease-in-out 3 forwards;';
+                    modelViewer.style.display = 'block';
+
+                    // When the animation ends, hide the model-viewer element
+                    modelViewer.addEventListener('animationend', function () {
+
+                        modelViewer.style.display = 'none';
+                    });
+
+                }
+
+            }
+
+            function RouterCommandListFile() {
+                window.open('Router.html', '_blank');
+            }
+
+            function PC2CommandListFile() {
+
+                window.open('PC2Cmd.html', '_blank');
+            }
+
+            function PC1CommandListFile() {
+                window.open('PC1Cmd.html', '_blank');
+            }
 
             function openPdfPPT() {
                 window.open('openPdfPPT.html', '_blank');
@@ -726,7 +1720,7 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"></script>
 
-            <script src="https://kit.fontawesome.com/ea03fb3bf9.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/ea03fb3bf9.js" crossorigin="anonymous"></script>
 
 
 </body>
