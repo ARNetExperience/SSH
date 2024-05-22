@@ -17,7 +17,7 @@
     <style>
         .connector {
 
-            width: 25.4%;
+            width: 21%;
 
 
 
@@ -36,7 +36,7 @@
 
 
 
-            top: 49.5%;
+            top: 49.4%;
 
 
             z-index: 1;
@@ -102,7 +102,7 @@
 
 
 
-            top: 48.4%;
+            top: 49%;
 
 
             z-index: 1;
@@ -161,7 +161,7 @@
             }
 
             50% {
-                transform: translateY(50%) translateX(1400%);
+                transform: translateY(50%) translateX(1300%);
             }
 
             75% {
@@ -197,7 +197,7 @@
             }
 
             50% {
-                transform: translateY(-50%) translateX(1400%);
+                transform: translateY(-50%) translateX(1300%);
             }
 
             75% {
@@ -374,12 +374,12 @@
 
             </div>
 
-            <div class="model-viewer-container">
+            <div class="model-viewer-container" style="background-color: #8d9a3d;">
 
                 <!-- Router -->
                 <model-viewer src="router 2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
                     poster="poster.webp" shadow-intensity="1"
-                    style="margin-top: -10%;position: absolute;margin-left: 60%;">
+                    style="margin-top: -10%;position: absolute;margin-left: 60%;width: 40%;">
                     <button class="Hotspot transparent-button" style="border-radius: 100%;" slot="hotspot-1"
                         data-position="37.69583283935017m 4.179193256400421m -51.57656243125259m"
                         data-normal="0.006317747746330481m 0.8348694792995796m -0.5504116991829504m"
@@ -800,7 +800,7 @@
 
                 <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
                     tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="PC1toRouter"
-                    style="width: 5%;z-index: 3;margin-top: -35%;margin-left: 15%;position: absolute;display: none; ">
+                    style="width: 5%;z-index: 3;margin-top: -38%;margin-left: 15%;position: absolute;display: none; ">
                     <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
                         data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
                         data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible"
@@ -1609,7 +1609,10 @@
                         modelViewer.addEventListener('animationend', function () {
 
                             modelViewer.style.display = 'none';
+                            alert("This is how a Secure Shell Protocol works.");
                         });
+
+                        
                         break;
                 }
 
@@ -1673,6 +1676,7 @@
                     modelViewer.addEventListener('animationend', function () {
 
                         modelViewer.style.display = 'none';
+                        alert("This is how a Secure Shell Protocol works.");
                     });
 
                 }
